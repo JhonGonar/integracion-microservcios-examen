@@ -1,0 +1,9 @@
+sudo docker-compose up -d
+sudo docker-compose ps
+sudo docker exec -it movie-service_mysql_docker_1 bash
+SHOW DATABASES;
+CREATE DATABASE moviedb;
+USE moviedb;
+SHOW TABLES;
+
+
