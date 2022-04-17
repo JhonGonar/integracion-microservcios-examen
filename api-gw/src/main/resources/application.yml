@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: api-gw
+  cloud:
+    gateway:
+      routes:
+        - id: movie-service
+          uri: lb://movie-service
+          predicates:
+            - Path=/movies/**
+        - id: serie-service
+          uri: lb://serie-service
+          predicates:
+            - Path=/series/**
+#  zipkin: TODO Activate
+#    base-url: http://localhost:9411
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 //TODO Reduce path to endpoint just to movies
 @RestController
 @Slf4j
-@RequestMapping("api/v1/movies")
+@RequestMapping("/movies")
 public record MovieController(MovieService movieService) {
 
     @PostMapping

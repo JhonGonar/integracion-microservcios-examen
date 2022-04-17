@@ -1,6 +1,8 @@
 mongosh  //para entrar a mongo sin permisos de admin
 db //uses test db.help() commands about how too create roles and more
 exit //to go back to root container shell
+
+sudo docker exec -it mongo-container bash
 mongo -u root -p rooot
 
 here, helps gives you the commands:
@@ -8,6 +10,6 @@ show dbs
 show collections 
 show users
 
-use_movies_db
+use movies_db
 >show collections
-db.serie.find.pretty()
+db.serie.find().pretty()

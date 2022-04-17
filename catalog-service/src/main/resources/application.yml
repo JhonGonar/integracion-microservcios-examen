@@ -1,0 +1,30 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: catalog-service
+  data:
+    mongodb:
+      #uri: mongodb+srv://jhon:_alejandro_@cluster0.vktas.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+    #authentication-database: admin
+      database: catalog_db
+      #ost: localhost
+      #password: rooot
+      #port: 27018
+      #username: root
+  rabbitmq:
+    addresses: localhost:5672
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+rabbitmq:
+  exchanges:
+    internal: internal.exchange
+  queue:
+    notification: notification.queue
+  routing-keys:
+    internal-notification: internal.notification.routing-key

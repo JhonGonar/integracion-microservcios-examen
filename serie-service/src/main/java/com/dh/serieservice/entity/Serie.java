@@ -15,7 +15,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document
+@Document(collection = "series")
 public class Serie {
     @MongoId
     private String id;

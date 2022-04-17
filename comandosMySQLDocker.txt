@@ -1,6 +1,7 @@
 sudo docker-compose up -d
 sudo docker-compose ps
 sudo docker exec -it movie-service_mysql_docker_1 bash
+mysql -uroot -proot
 SHOW DATABASES;
 CREATE DATABASE moviedb;
 USE moviedb;

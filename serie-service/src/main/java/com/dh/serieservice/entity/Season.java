@@ -15,7 +15,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document
+@Document(collection = "seasons")
 public class Season {
     @MongoId
     private String id;

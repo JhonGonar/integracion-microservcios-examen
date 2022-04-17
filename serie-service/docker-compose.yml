@@ -5,7 +5,7 @@ services:
     image: mongo:5.0
     container_name: mongo-container
     ports:
-      - 27017:27017
+      - "27018:27018"
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=rooot

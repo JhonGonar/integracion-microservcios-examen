@@ -13,7 +13,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document
+@Document(collection = "chapters")
 public class Chapter {
     @MongoId
     private String id;
