@@ -14,7 +14,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document
+@Document(collection = "media_item")
 public final class Serie extends Pattern {
     @MongoId
     private String id;

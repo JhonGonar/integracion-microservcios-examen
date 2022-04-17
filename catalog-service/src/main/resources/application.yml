@@ -14,6 +14,8 @@ spring:
       #username: root
   rabbitmq:
     addresses: localhost:5672
+  zipkin:
+    base-url: http://localhost:9411
 eureka:
   client:
     service-url:
@@ -24,7 +26,7 @@ eureka:
 rabbitmq:
   exchanges:
     internal: internal.exchange
-  queue:
+  queues:
     notification: notification.queue
   routing-keys:
     internal-notification: internal.notification.routing-key

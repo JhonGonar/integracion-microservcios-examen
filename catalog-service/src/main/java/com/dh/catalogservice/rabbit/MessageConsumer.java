@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public record MessageConsumer(CatalogService catalogService) {
-    @RabbitListener(queues = "${rabbitmq.queue.notification}")
+    @RabbitListener(queues = "${rabbitmq.queues.notification}")
     public void consumer(Serie mediaItem){
         log.info("Consumed {} from queue", mediaItem);
         catalogService.saveNewMedia(mediaItem);

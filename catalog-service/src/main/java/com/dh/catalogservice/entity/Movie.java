@@ -13,7 +13,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "movies_catalog")
+@Document(collection = "media_item")
 public final class Movie extends Pattern{
     @MongoId
     private Integer id;
