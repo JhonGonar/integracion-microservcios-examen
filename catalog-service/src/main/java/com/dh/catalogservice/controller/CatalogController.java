@@ -14,7 +14,7 @@ import java.util.List;
 public record CatalogController(CatalogService catalogService) {
 
     @GetMapping("{genre}")
-    public List<? extends Pattern> catalogByGenre(@PathVariable("genre") String genre){
-        return catalogService.getCatalogByGenre(genre);
+    public List<?> catalogByGenre(@PathVariable("genre") String genre){
+        return List.of(catalogService.getCatalogByGenre(genre), catalogService.getCatalogByGenre2(genre));
     }
 }
