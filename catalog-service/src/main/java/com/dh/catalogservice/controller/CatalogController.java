@@ -17,4 +17,5 @@ public record CatalogController(CatalogService catalogService) {
     public List<?> catalogByGenre(@PathVariable("genre") String genre){
         return List.of(catalogService.getCatalogByGenre(genre), catalogService.getCatalogByGenre2(genre));
     }
+
 }
